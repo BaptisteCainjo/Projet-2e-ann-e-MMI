@@ -1,0 +1,38 @@
+@import './addedit.css';
+@import './listProducts.css';
+@import './product.css';
+@import './form.css';
+@import './header.css';
+@import './popup.css';
+
+$init-margin:0;
+$init-padding:0;
+$h1-font-size:2.25rem;
+$body-bkg-color:#F1F4F9;
+$bold-font-weight:700;
+
+* {
+    margin: $init-margin;
+    padding: $init-padding;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background-color: $body-bkg-color;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    font-weight: $bold-font-weight;
+    width: fit-content;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    margin: 2% 3% 0% 3%;
+}
+

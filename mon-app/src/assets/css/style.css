@@ -1,0 +1,31 @@
+@import './addedit.css';
+@import './listProducts.css';
+@import './product.css';
+@import './form.css';
+@import './header.css';
+@import './popup.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", "sans-serif";
+}
+
+body {
+  background-color: #F1F4F9;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  margin: 2% 3% 0% 3%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<button type="button" onclick="test()">Send</button>
+<h1>json</h1>
+<div id="json">
+</div>
+<h1>response</h1>
+<div id="response">
+</div>
+
+<script>
+/*
+Blocage d’une requête multiorigines (Cross-Origin Request) : la politique « Same Origin » ne permet pas 
+de consulter la ressource distante située sur http://127.0.0.1:8000/wp-json/wc/v3/products. 
+Raison : l’en-tête CORS « Access-Control-Allow-Origin » est manquant. Code d’état : 200.
+*/
+async function test() { // fonction asynchrone
+	let response = await fetch("http://127.0.0.1:8000/wp-json/wc/v3/products", {
+		method: 'GET',
+		headers: {
+			'Accept': 'application/json'
+		}
+	}) ;
+	if(response.ok) {
+		document.getElementById("response").innerHTML = await response.text(); // attendre la résolution d'une promesse
+	}
+	else {
+		document.getElementById("response").innerHTML="Error code " + response.status;
+	}
+}
+</script>
+
+</body>
+</html>

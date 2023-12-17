@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<button type="button" onclick="test()">Send</button>
+<h1>json</h1>
+<div id="json">
+</div>
+<h1>response</h1>
+<div id="response">
+</div>
+<script>
+/*
+Blocage d’une requête multiorigine (Cross-Origin Request) : la politique « Same Origin » ne permet pas de consulter 
+la ressource distante située sur http://127.0.0.1:8000/wp-json/wc/v3/products. Raison : l’en-tête « content-type » 
+n’est pas autorisé d’après l’en-tête « Access-Control-Allow-Headers » de la réponse de pré-vérification des requêtes CORS.
+*/
+function test() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 201) {
+      if (this.getResponseHeader("Location")) {
+        document.getElementById("response").innerHTML = this.responseText ;
+      }
+      else {
+        document.getElementById("response").innerHTML = "Error, no \"Location\" in response headers";
+      }
+    }
+    else {
+      document.getElementById("response").innerHTML = "Error code " + this.status;
+    }
+  };
+  xhttp.open("POST", "http://127.0.0.1:8000/wp-json/wc/v3/products", true);
+  xhttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+  xhttp.setRequestHeader('Accept', 'application/json');
+  let json = JSON.stringify({
+    article_type: "livre",
+    titre: "Harry Potter, I : Harry Potter à l'école des sorciers",
+    prix: 8.95,
+    disponibilite: 8,
+    image: "https://m.media-amazon.com/images/I/41o+Dk8N2fS._SX332_BO1,204,203,200_.jpg"
+  });
+  document.getElementById("json").innerHTML = json;
+  xhttp.send(json);
+}
+</script>
+
+</body>
+</html>

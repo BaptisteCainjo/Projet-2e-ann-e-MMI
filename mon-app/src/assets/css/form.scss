@@ -1,0 +1,108 @@
+$init-gap-medium:25px;
+$init-gap-very-low:10px;
+$init-font-weight:500;
+$init-border-raduis-high:6px;
+$init-border-raduis-low:3px;
+$init-opacity:1;
+
+$font-size-low:14px;
+
+$text-color-grey:#4F5E73;
+$init-color:#ffffff;
+
+$bkg-color-blue:#6365F1;
+
+$bold-font-weight:700;
+
+$btn-padding:10px;
+
+$margin-center:0 auto;
+
+$width-litle-input:48%;
+
+
+$value-form-type-number:'data:image/svg+xml;utf8,%3Csvg%20version%3D%2211%22%20viewBox%3D%220%200%2050%2067%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%222%22%3E%3Cline%20x1%3D%221%22%20x2%3D%2250%22%20y1%3D%2233.5%22%20y2%3D%2233.5%22%20stroke%3D%22%23D8D8D8%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2020)%20rotate(45)%20translate(-25%20-20)%22%20points%3D%2219%2026%2019%2014%2032%2014%22%20stroke%3D%22%23000%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2045)%20rotate(225)%20translate(-25%20-45)%22%20points%3D%2219%2052%2019%2039%2032%2039%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E';
+
+
+
+.addedit {
+    display: flex;
+    flex-direction: column;
+    gap: $init-gap-medium;
+    width: 80%;
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: $init-gap-very-low;
+    }
+
+    label {
+        font-weight: $init-font-weight;
+    }
+
+    input {
+        height: 50px;
+        border: 1px solid black;
+        border-radius: $init-border-raduis-high;
+        padding-left: 5%;
+
+        &::placeholder {
+            font-size: $font-size-low;
+            color: $text-color-grey;
+        }
+    }
+
+    a{
+        margin: $margin-center;
+    }
+
+    button {
+        border: none;
+        background-color: $bkg-color-blue;
+        color: $init-color;
+        font-weight: $bold-font-weight;
+        padding: $btn-padding;
+        width: fit-content;
+        border-radius: $init-border-raduis-low;
+        cursor: pointer;
+    }
+}
+
+
+
+@media (min-width : 768px) {
+    .addedit input {
+        padding-left: 3%;
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            opacity: $init-opacity;
+            border-left: 1px solid #d8d8d8;
+            height: 50px;
+            width: 36px;
+            cursor: pointer;
+        }
+
+        &[type="number"] {
+            background-image: url($value-form-type-number);
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .from-row{
+        display: flex;
+        justify-content: space-between;
+
+        .field{
+            width: $width-litle-input;
+        }
+    }
+
+    .form-last{
+        width: $width-litle-input;
+        margin: 0 auto;
+    }
+}

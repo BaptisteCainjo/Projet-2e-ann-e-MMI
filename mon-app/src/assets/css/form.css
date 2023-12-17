@@ -1,0 +1,72 @@
+.addedit {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 80%;
+}
+.addedit .field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.addedit label {
+  font-weight: 500;
+}
+.addedit input {
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding-left: 5%;
+}
+.addedit input::-moz-placeholder {
+  font-size: 14px;
+  color: #4F5E73;
+}
+.addedit input::placeholder {
+  font-size: 14px;
+  color: #4F5E73;
+}
+.addedit a {
+  margin: 0 auto;
+}
+.addedit button {
+  border: none;
+  background-color: #6365F1;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .addedit input {
+    padding-left: 3%;
+  }
+  .addedit input::-webkit-inner-spin-button, .addedit input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    opacity: 1;
+    border-left: 1px solid #d8d8d8;
+    height: 50px;
+    width: 36px;
+    cursor: pointer;
+  }
+  .addedit input[type=number] {
+    background-image: url("data:image/svg+xml;utf8,%3Csvg%20version%3D%2211%22%20viewBox%3D%220%200%2050%2067%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%222%22%3E%3Cline%20x1%3D%221%22%20x2%3D%2250%22%20y1%3D%2233.5%22%20y2%3D%2233.5%22%20stroke%3D%22%23D8D8D8%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2020)%20rotate(45)%20translate(-25%20-20)%22%20points%3D%2219%2026%2019%2014%2032%2014%22%20stroke%3D%22%23000%22%2F%3E%3Cpolyline%20transform%3D%22translate(25%2045)%20rotate(225)%20translate(-25%20-45)%22%20points%3D%2219%2052%2019%2039%2032%2039%22%20stroke%3D%22%23000%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    background-position: center right;
+    background-repeat: no-repeat;
+  }
+  .from-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .from-row .field {
+    width: 48%;
+  }
+  .form-last {
+    width: 48%;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=form.css.map */

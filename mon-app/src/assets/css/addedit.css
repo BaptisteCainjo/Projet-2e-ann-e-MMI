@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 15px;
+  padding: 25px 0;
+  gap: 30px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10%;
+}
+
+.category {
+  background-color: #ffffff;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  border-radius: 6px;
+  display: flex;
+  gap: 20px;
+}
+.category a, .category p {
+  background-color: #F5F8FF;
+  color: #4F5E73;
+  padding: 10px;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: 0.25s ease-in-out;
+}
+.category a.clicked, .category p.clicked {
+  background-color: #6365F1;
+  color: #ffffff;
+}
+.category a:hover, .category p:hover {
+  background-color: #6365F1;
+  color: #ffffff;
+  transition: 0.25s ease-in-out;
+}
+.category p {
+  cursor: default;
+}
+.category p:not(.clicked):hover {
+  background-color: black;
+  background-color: #F5F8FF;
+  color: #4F5E73;
+  transition: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 50%;
+    margin-bottom: 3%;
+  }
+}/*# sourceMappingURL=addedit.css.map */

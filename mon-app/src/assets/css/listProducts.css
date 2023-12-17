@@ -1,0 +1,194 @@
+@charset "UTF-8";
+.setTable {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.setTable .navTab {
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.setTable .navTab h2 > span {
+  font-size: 16px;
+  color: #4F5E73;
+  font-weight: 600;
+  font-style: italic;
+}
+.setTable .navTab h2 > span:first-of-type {
+  margin-left: 5px;
+}
+.setTable .navTab .checkboxAllSelected {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.setTable .navTab .checkboxAllSelected input {
+  margin: 0;
+}
+.setTable .navTab .checkboxAllSelected input:hover {
+  background-color: #F33853;
+  border-color: #F33853;
+}
+.setTable .navTab .checkboxAllSelected input:checked {
+  background-color: #F33853;
+  border-color: #F33853;
+}
+.setTable .navTab .checkboxAllSelected label:hover + input {
+  border-color: #F33853;
+}
+
+hr {
+  border: solid #e8e8e8 2px;
+}
+
+input {
+  margin-right: 10px;
+}
+input[type=checkbox] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #999;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+input[type=checkbox]:hover {
+  background-color: #6365F1;
+  border-color: #6365F1;
+  transition: 0.25s ease-in-out;
+}
+input[type=checkbox]:hover::before {
+  content: "✓";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 16px;
+}
+input[type=checkbox]:checked {
+  background-color: #494ce0;
+  border-color: #494ce0;
+}
+input[type=checkbox]:checked::before {
+  content: "✓";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 16px;
+}
+
+.setProducts {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.aProduct {
+  color: #4F5E73;
+  font-weight: 500;
+  border-top: solid 0.5px #e7e7e9;
+  border-bottom: solid 0.5px #e7e7e9;
+  margin: 15px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.infoProduct {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.infoProduct .infoProductCheckbox {
+  display: flex;
+  align-items: center;
+}
+.infoProduct .btn-modified {
+  background: url("../images/modified.svg") no-repeat center;
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+}
+
+.voirMasquerInfos {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e6e7ee;
+  cursor: pointer;
+}
+.voirMasquerInfos button {
+  background: none;
+  border: none;
+  color: #6365F1;
+  font-weight: 500;
+  cursor: pointer;
+}
+.voirMasquerInfos img {
+  width: 15px;
+  height: 15px;
+  transition: 0.3s ease-in-out;
+}
+.voirMasquerInfos img.active {
+  transform: rotate(180deg);
+}
+
+.retailProduct table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.retailProduct table td {
+  font-size: 15px;
+  border: solid 0.5px #e6e7ee;
+}
+.retailProduct table td.nameLabel {
+  background-color: #e6e7ee;
+  padding: 5px 10px;
+}
+.retailProduct table td.valueLabel {
+  padding: 5px 10px;
+}
+
+.btnDelete {
+  background-image: url("https://localhost:3000/img/delete.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
+.valueLabel img {
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .setProducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .setTable .navTab {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .setProducts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}/*# sourceMappingURL=listProducts.css.map */

@@ -1,0 +1,34 @@
+.searchbar {
+  text-align: center;
+}
+.searchbar .search-input {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 8px 10px;
+  width: 75%;
+  justify-content: space-between;
+}
+.searchbar .search-input input {
+  border: none;
+  background: none;
+  width: 100%;
+}
+.searchbar .search-input input:focus {
+  outline: none;
+}
+.searchbar .search-input input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 10px;
+  background: url("../images/close.svg") no-repeat center;
+  margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+  .searchbar .search-input {
+    width: 25%;
+  }
+}/*# sourceMappingURL=searchbar.css.map */

@@ -1,0 +1,57 @@
+.popup {
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  position: fixed;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup .popupContent {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2%;
+  border-radius: 5px;
+  gap: 10px;
+}
+.popup .popupContent .btn-close {
+  background: url("../images/close.svg") no-repeat center;
+  background-size: contain;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.popup .popupContent div {
+  display: flex;
+  justify-content: flex-end;
+}
+.popup .popupContent h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.popup .popupContent ul {
+  margin-left: 7%;
+}
+.popup .popupContent .btn-validate {
+  background-color: #F33853;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1.5% 3%;
+  color: white;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.popup .popupContent .btn-validate:hover {
+  background-color: #d32a43;
+}/*# sourceMappingURL=popup.css.map */
